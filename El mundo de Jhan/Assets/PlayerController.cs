@@ -6,9 +6,11 @@ public class PlayerController : MonoBehaviour {
 	public float maxSpeed = 5f;
 	public float speed = 2f;
 	public bool grounded;
+    public float jumpPower = 6.5f;
 
 	private Rigidbody2D rb2d;
 	private Animator anim;
+    private bool jump;
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
@@ -19,9 +21,22 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		anim.SetFloat ("Speed", Mathf.Abs(rb2d.velocity.x));
 		anim.SetBool ("Grounded", grounded);
+
+        if (Input.GetKeyDown(KeyCode.UpArrow) && grounded)
+        {
+            jump = true;
+        }
 	}
 
-	void FixedUpdate(){
+    void FixedUpdate() {
+
+        Vector3 fixedVelocity = rb2d.velocity;
+        fixedVelocity.x *= 0.75f;
+
+        if (grounded)
+        {
+            rb2d.velocity = fixedVelocity;
+        }
 
 		float h = Input.GetAxis ("Horizontal");
 
@@ -37,6 +52,19 @@ public class PlayerController : MonoBehaviour {
 		if (h < -0.1f) {
 			transform.localScale = new Vector3 (-1f, 1f, 1f);
 		}
+
+        if (jump)
+        {
+            rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
+            rb2d.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            jump = false;
+        }
+
 		Debug.Log (rb2d.velocity.x);
 	}
+
+    void OnBecameInvisible()
+    {
+        transform.position = new Vector3(-1, 0, 0);
+    }
 }
