@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/El mundo de Jhan.unity
+  isLoaded: 1
+  isActive: 1
