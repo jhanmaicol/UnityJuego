@@ -1,9 +1,13 @@
-﻿<Properties StartupItem="El mundo de Jhan.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayerController.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CamaraFollow.cs">
     <Files>
-      <File FileName="Assets\PlayerController.cs" Line="38" Column="41" />
-      <File FileName="Assets\CheckGround.cs" Line="1" Column="1" />
+      <File FileName="Assets\PlayerController.cs" Line="27" Column="22" />
+      <File FileName="Assets\CheckGround.cs" Line="16" Column="45" />
+      <File FileName="Assets\DrawSceneLine.cs" Line="15" Column="43" />
+      <File FileName="Assets\PlataformaMovil.cs" Line="10" Column="29" />
+      <File FileName="Assets\PlataformaFalling.cs" Line="40" Column="26" />
+      <File FileName="Assets\CamaraFollow.cs" Line="20" Column="113" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
