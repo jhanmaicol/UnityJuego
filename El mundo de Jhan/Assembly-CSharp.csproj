@@ -49,6 +49,7 @@
      <Compile Include="Assets\CamaraFollow.cs" />
      <Compile Include="Assets\CheckGround.cs" />
      <Compile Include="Assets\DrawSceneLine.cs" />
+     <Compile Include="Assets\EnemyController.cs" />
      <Compile Include="Assets\PlataformaFalling.cs" />
      <Compile Include="Assets\PlataformaMovil.cs" />
      <Compile Include="Assets\PlayerController.cs" />

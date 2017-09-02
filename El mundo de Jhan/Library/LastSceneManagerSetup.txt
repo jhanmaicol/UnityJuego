@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/El mundo de JhanVol2.unity
+- path: Assets/Scenes/El mundo de JhanVol4.unity
   isLoaded: 1
   isActive: 1
